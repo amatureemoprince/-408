@@ -1,6 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
  * 插入操作
@@ -93,7 +94,7 @@ void bubbleSort(int *arr, const int len) {
  * @param len 数组长度
  * @param num 要查找的元素
  */
-int halfFoldSort(int *arr, const int len, const int num) {
+int halfFoldFind(int *arr, const int len, const int num) {
   //先将其排序
   bubbleSort(arr, len);
   int start = 0;
@@ -129,6 +130,28 @@ void reverse(int *arr, const int len) {
     arr[i] = arr[len - i - 1];
     arr[len - i - 1] = temp;
   }
+}
+
+/**
+ * 给定一个含n(n>=1)
+ * 个整数的数组，请设计一个在时间上尽可能高效的算法，找出数组中未出现的最小正整数。例如，数组{−5,3,2,3}
+ * 中未出现的最小正整数是1；数组{1,2,3}
+ * 中未出现的最小正整数是4
+ */
+int findMinPositive(int *arr, const int len) {
+  //进行排序
+  bubbleSort(arr, len);
+  int index = 1;
+  for (int i = 0; i < len; i++) {
+    if (arr[i] <= 0) {
+      continue;
+    }
+    if (arr[i] != index) {
+      return index;
+    }
+    index++;
+  }
+  return 0;
 }
 int main(void) {
   // 动态分配数组
@@ -169,7 +192,7 @@ int main(void) {
   }
   printf("\n");
   // TODO: 测试折半查找
-  printf("half fold sort 133 index: %d", halfFoldSort(arr, len, 133));
+  printf("half fold sort 133 index: %d", halfFoldFind(arr, len, 133));
   printf("\n");
   // TODO: 测试反转数组
   reverse(arr, len);
@@ -179,5 +202,9 @@ int main(void) {
   }
   // 释放内存
   free(arr);
+  printf("\n");
+  // TODO: 测试2018年考试题
+  int brr[]  = {-1, 1, 2, 4, 12, 23};
+  printf("the positive min is %d \n", findMinPositive(brr, 6));
   return 0;
 }
