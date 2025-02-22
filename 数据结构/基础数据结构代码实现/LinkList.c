@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * 定义链表节点
@@ -180,6 +181,35 @@ void freeNode(Node *head) {
   }
 }
 
+/**
+ * 2009年题
+ * 已知一个带有表头结点的单链表，结点结构为
+ * data	link
+ * 假设该链表只给出了头指针list。在不改变链表的前提下，请设计一个尽可能高效的算法，查找链表中倒数第k
+ * 个位置上的结点（k
+ * 为正整数）。若查找成功，算法输出该结点的data域的值，并返回1；否则，只返回0
+ */
+//思路：双指针法，快的先走k步，然后慢的和快的一起走，快的到了最后，慢的就是倒数的第k个了
+int findKBackWord(const Node *head, const int k) {
+  if (head == NULL || k <= 0) {
+    return 0;
+  }
+  const Node *fast = head;
+  const Node *slow = head;
+  for (int i = 0; i < k; i++) {
+    fast = fast->next;
+  }
+  if (!fast) {
+    return 0;
+  }
+  while (fast) {
+    slow = slow->next;
+    fast = fast->next;
+  }
+  printf("the back element %d is %d \n", k, slow->data);
+  return 1;
+}
+
 int main(void){
   Node *head = createHead();
   for (int i = 0; i < 10; i++) {
@@ -193,6 +223,8 @@ int main(void){
   printf("insert 10 in the linkList .\n");
   insertHead(head, 10);
   traversalLinkList(head);
+  // TODO: 测试2009年数据结构题
+  printf("the result is %d \n", findKBackWord(head, 1));
   freeNode(head);
   return 0;
 }
