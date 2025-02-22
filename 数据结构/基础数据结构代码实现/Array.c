@@ -1,7 +1,6 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 /**
  * 插入操作
@@ -153,6 +152,71 @@ int findMinPositive(int *arr, const int len) {
   }
   return 0;
 }
+
+/**
+ * 2010年考题
+ * 设将n(n>1)
+ * 个整数存放到一维数组R中。设计一个在时间和空间两方面都尽可能高效的算法，将R中保存的序列循环左移p(0<p<n)
+ * 个位置，即将R中的数据由(X0,X1,...,Xn−1)
+ * 变换为(Xp,Xp+1,...,Xn−1,X0,X1,...,Xp−1)。
+ */
+//随便写一个数组观察就可以得出规律
+//    1 2 3 4  移动位数p
+//    2 3 4 1    1
+//    3 4 1 2    2
+//    4 1 2 3    3
+void moveLeft(int arr[], const int p, const int len) {
+  int *brr = (int *) malloc(sizeof(int) * p);
+  //取出前p个元素
+  printf("\nbrr: ");
+  for (int i = 0; i < p; i++) {
+    brr[i] = arr[i];
+    printf("%d ", brr[i]);
+  }
+  printf("\narr: ");
+  //移动后面的到前面
+  for (int i = p; i < len; i++) {
+    arr[i - p] = arr[i];
+    printf("%d ", arr[i - p]);
+  }
+  //将之前取出来的元素放入arr
+  for (int i = 0; i < p; i++) {
+    arr[len - p + i] = brr[i];
+  }
+  printf("\n");
+  free(brr);
+}
+
+/**
+ * 2011统考真题
+ *一个长度为L（L>=1）的升序序列S，处在第[L/2]个位置的数称为S的中位数。例如，若序列S1=(11,13,15,17,19)则S1的中位数是15
+ *，两个序列的中位数是它们所有元素的升序序列的中位数。例如，若S2=(2,4,6,8,20)
+ *，则S1和S2的中位数是11。现在有两个等长升序序列A和B，设计一个在时间和空间两方面都尽可能高效的算法，找出两个序列A和B的中位数。
+ */
+//肯定需要将两个数组进行排序，然后找到L/2位置的元素
+int findMidNumber(const int *arr, const int *brr, const int len) {
+  //声明两个指针，用于两个数组元素的比较大小
+  int a = 0;
+  int b = 0;
+  int *crr = (int *)malloc(sizeof(int) * (len + len));
+  while (a < len || b < len) {
+    if (arr[a] <= brr[b] && a < len) {
+      crr[a + b] = arr[a];
+      a++;
+    }else if (arr[a] > brr[b] && b < len) {
+      crr[a + b] = brr[b];
+      b++;
+    }
+  }
+  const int result = crr[(len + len) / 2];
+  printf("traversal the array: ");
+  for (int i = 0; i < 2 * len; i++) {
+    printf("%d ", crr[i]);
+  }
+  free(crr);
+  return result;
+}
+
 int main(void) {
   // 动态分配数组
   int *arr = (int *)malloc(5 * sizeof(int));
@@ -206,5 +270,16 @@ int main(void) {
   // TODO: 测试2018年考试题
   int brr[]  = {-1, 1, 2, 4, 12, 23};
   printf("the positive min is %d \n", findMinPositive(brr, 6));
+  // TODO: 测试2011年考题
+  const int crr[5] = {11,13,15,17,19};
+  const int drr[5] = {2,4,6,8,20};
+  printf("\nthe 2011 year's result is %d\n", findMidNumber(crr, drr, 5));
+  // TODO: 测试2010年考试题
+  int err[6] = {12, 34, 44, 54, 67, 99};
+  moveLeft(err, 3, 6);
+  printf("test 2010's result: ");
+  for (int i = 0; i < 6; i++) {
+    printf("%d ", err[i]);
+  }
   return 0;
 }
