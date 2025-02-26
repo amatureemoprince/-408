@@ -18,9 +18,56 @@
     </div>
 	<br>
     <div align="center">
-        <h2>针对考研党的一份较为全面的408笔记</h2>
+        <h2>📚针对考研党的一份较为全面的408笔记</h2>
+    </div>
+    <div align="center">
+        <h3>🔥 课程概览</h3>
+    <table align="center">
+        <tr>
+            <td align="center">
+                <img src="https://img.shields.io/badge/计算机网络-Network-blue" alt="计算机网络"/>
+                <br>
+                TCP/IP协议栈 | OSI、TCP/IP模型 | 应用层协议
+            </td>
+            <td align="center">
+                <img src="https://img.shields.io/badge/操作系统-OS-green" alt="操作系统"/>
+                <br>
+                进程管理 | 内存管理 | 文件系统
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <img src="https://img.shields.io/badge/数据结构-DataStructure-red" alt="数据结构"/>
+                <br>
+                线性结构 | 树形结构 | 图论算法
+            </td>
+            <td align="center">
+                <img src="https://img.shields.io/badge/计算机组成原理-Architecture-orange" alt="计算机组成原理"/>
+                <br>
+                CPU设计 | 存储系统 | 指令系统
+            </td>
+        </tr>
+    </table>
     </div>
 </div>
+<div align="center">
+    <p>📚 本仓库包含408统考的四门专业课程的详细笔记</p>
+</div>
+<div>
+    <h3>📝 特色说明</h3>
+    <p>✨ 知识点系统化整理</p>
+    <h6>整体目录</h6><br>
+    <p>待更新...</p>
+    <h5>📖 重难点详细解析</h5>
+    <p>待更新...</p>
+    <h5>📈 历年真题分析</h5>
+    <p>待更新...</p>
+    <h5>🎯 复习重点指南</h5>
+    <p>待更新...</p>
+</div>
+
+
+
 
 
 
