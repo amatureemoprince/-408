@@ -18,7 +18,12 @@
     </div>
 	<br>
     <div align="center">
-        <h2>📚针对考研党的一份较为全面的408笔记</h2>
+        <h2>📚针对考研党的一份较为全面的408笔记（个人博客（Java咖啡馆）已将搭建好了，在博客中会有更好的体验哟）</h2>
+        <h3>
+    		<a href="https://amatureemoprince.github.io/TechnologyAndLife/" style="text-decoration: none; color: inherit;">
+        Java咖啡馆
+    		</a>
+</h3>
     </div>
     <div align="center">
         <h3>🔥 课程概览</h3>
