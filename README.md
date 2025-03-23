@@ -100,7 +100,7 @@
 
 <a href="https://github.com/amatureemoprince/-408/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%8E%8B%E9%81%93%E7%AC%94%E8%AE%B0/time-and-space-complexity.md">时间、空间复杂度</a><br>
 
-<a href =“https://github.com/amatureemoprince/-408/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%8E%8B%E9%81%93%E7%AC%94%E8%AE%B0/linear-list.md">线性表相关知识点</a><br>
+<a href="https://github.com/amatureemoprince/-408/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%8E%8B%E9%81%93%E7%AC%94%E8%AE%B0/linear-list.md">线性表相关知识点</a><br>
 
 <a href="https://github.com/amatureemoprince/-408/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%8E%8B%E9%81%93%E7%AC%94%E8%AE%B0/string.md">字符串相关知识点</a><br>
 
