@@ -24,7 +24,8 @@
     		<a href="https://amatureemoprince.github.io/TechnologyAndLife/" style="text-decoration: none; color: inherit;">
         Java咖啡馆
     		</a>
-</h3>
+        </h3>
+        <h5>除此之外，在每个目录下面都有对应的【语雀】版笔记，点击就可查看！</h5>
     </div>
     <div align="center">
         <h3>🔥 课程概览</h3>
@@ -66,8 +67,12 @@
     <ul>
     <li>计算机网络</li>
         <p>🎉每章尽量详细地介绍了要学习的内容，从概念出发并使用通俗易懂的语言进行解释。部分章节穿插着考研真题进行讲解，目的就是为了更好地理解并运用到解题中。</p>
+        <a href="https://www.yuque.com/g/yuqueyonghu71tocz/kmswnx/collaborator/join?token=t9jl8ARfhVmNwEOd&source=book_collaborator# 《计算机网络》">语雀版-计算机网络</a>
+        <br>
     <li>数据结构</li>
         <p>📊数据结构比仅仅需要概念地理解，还需要上机进行“敲击”。所以除了具体的定义我还专门创建了目录为了代码的练习。其中包括每种数据结构的基本定义、常见的练习、进阶的练习题和考研真题，在一些较为复杂的题目下我都留下来具体的思路，便于理解。我们需要知道ds不仅仅需要思维还需要记忆，所以希望大家在理解的基础记忆住解题的思路，这样我们的思维才能越来越高。</p>
+        <a href="https://www.yuque.com/g/yuqueyonghu71tocz/nelr8w/collaborator/join?token=44FjLD5O4umcN9Cy&source=book_collaborator# 《数据结构》">语雀版-数据结构笔记</a>
+        <br>
     <li>计算机组成原理</li>
         <p>
             待更新...
